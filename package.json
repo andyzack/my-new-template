@@ -1,0 +1,72 @@
+{
+  "name": "my-new-template",
+  "private": true,
+  "version": "0.0.14",
+  "type": "module",
+  "author": "Sesimi R&D",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "vite",
+    "build": "deploy",
+    "setup": "npm install && node dev/rename.mjs && npm run update-eslint",
+    "update-eslint": "npx install-peerdeps --dev @myadbox/eslint-config-exoplanet",
+    "update-name": "node dev/rename.mjs --force"
+  },
+  "engines": {
+    "node": ">=16.0"
+  },
+  "repository": {
+    "url": "https://github.com/myadbox/exolite",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/myadbox/exolite/issues"
+  },
+  "dependencies": {
+    "@myadbox/exoplanet-toolkit": "^1.0.20",
+    "lazysizes": "^5.3.2"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
+    "@babel/preset-react": "^7.18.6",
+    "@myadbox/eslint-config-exoplanet": "^1.0.8",
+    "@myadbox/exoplanet-deployment": "^0.1.15",
+    "@myadbox/nebula-template-utils": "^0.0.94",
+    "@myadbox/prettier-config-exoplanet": "^1.0.5",
+    "@types/node": "^18.7.6",
+    "@types/react": "^17.0.39",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "@vitejs/plugin-react": "^2.0.1",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-jsdoc": "^39.6.4",
+    "eslint-plugin-react": "^7.32.1",
+    "eslint-plugin-spellcheck": "0.0.19",
+    "eslint-plugin-testing-library": "^5.9.1",
+    "eslint-plugin-tsdoc": "^0.2.17",
+    "prettier": "^2.8.3",
+    "query-string": "^7.1.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "replace": "^1.2.1",
+    "typescript": "^4.8.3",
+    "vite": "^3.0.6"
+  },
+  "prettier": "@myadbox/prettier-config-exoplanet",
+  "eslintConfig": {
+    "root": true,
+    "extends": "@myadbox/eslint-config-exoplanet"
+  },
+  "eslintIgnore": [
+    "src/animation/lib/**/*",
+    "node_modules",
+    "dist"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  }
+}
