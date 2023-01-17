@@ -49,6 +49,15 @@ const Template = (props) => {
             width: `min(12vmax, 5.5em)`,
           }}
         />
+        <div className="flex">
+            <div className="m-auto">
+                <div className="text-4xl text-white">My new template</div>
+                <div>using tailwind</div>
+                <button className="px-6 py-2 mt-10 rounded bg-green-800 hover:bg-green-600 text-white" type="button">
+                    Read more
+                </button>
+            </div>
+        </div>
       </Wrapper>
     </Body>
   )
